@@ -1,0 +1,8 @@
+*.key
+*.pem
+id_rsa
+id_ed25519
+taskflow_automation
+taskflow_automation.pub
+__pycache__/
+*.pyc
