@@ -1,0 +1,17 @@
+table inet sis3 {
+
+    chain input {
+
+        type filter hook input priority 20;
+        policy accept;
+
+        iifname "lo" accept
+
+        ct state established,related accept
+
+        tcp dport { 22, 8080 } counter accept
+
+        meta l4proto tcp counter drop
+
+    }
+}

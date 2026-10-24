@@ -1,0 +1,15 @@
+digraph network {
+    rankdir=LR;
+    node [shape=box, style=rounded];
+
+    Windows [label="Windows 11"];
+    Ubuntu [label="Ubuntu WSL\nIP: 172.18.33.15"];
+    SSH [label="SSH Server\nTCP 22"];
+    TaskFlow [label="TaskFlow\nTCP 8080"];
+    GitHub [label="GitHub\nHTTPS 443"];
+
+    Windows -> Ubuntu;
+    Ubuntu -> SSH;
+    Ubuntu -> TaskFlow;
+    Ubuntu -> GitHub;
+}
